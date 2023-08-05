@@ -1,0 +1,17 @@
+.cardContainer {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    border: 2px solid green;
+}
+.prices {
+    display:flex;
+    flex: 2;
+    flex-direction: column;
+    border: 2px solid red;
+}
+.activity {
+    display: flex;
+    flex: 6;
+    border: 2px solid red;
+}

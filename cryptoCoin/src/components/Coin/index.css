@@ -1,0 +1,33 @@
+.coinContainer{
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    border: 2px solid black;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+.coinBrand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.coinPrice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.coinBrand img {
+    height: 3vh;
+}
+.coinBrand h1 {
+    font-size: 2vh;
+}
+
+.coinPrice p {
+    font-size: 2vh;
+    flex: 8;
+    justify-content: center;
+    align-items: center;
+}
