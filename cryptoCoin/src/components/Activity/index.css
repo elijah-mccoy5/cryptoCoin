@@ -1,0 +1,4 @@
+.activityContainer {
+    display: flex;
+    flex-direction: column;
+}

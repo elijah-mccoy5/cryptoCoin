@@ -3,7 +3,7 @@ import "./index.css";
 
 const Coin = (props: CoinProps) => {
   return (
-    <div className="coinContainer" key={props.id}>
+    <div className="coinContainer" onClick={props.onSelectItem}>
       <div className="coinBrand">
         <img src={props.image} />
         <h1>{props.name}</h1>
