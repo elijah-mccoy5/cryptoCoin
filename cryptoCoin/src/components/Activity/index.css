@@ -1,4 +1,29 @@
 .activityContainer {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    background-color: #6d747d;
+    height: 65vh;
+    width: 25vw;
+    border-radius: 25px;
+}
+.specs{
+text-align: left;
+line-height: 3;
+}
+.activityContainer h1{
+    font-size: 5vh;
+    margin-bottom: 2vh;
+}
+.activityContainer p {
+    font-size: 2vh;
+}
+.currPrice{
+    font-size: 3vh;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
 }

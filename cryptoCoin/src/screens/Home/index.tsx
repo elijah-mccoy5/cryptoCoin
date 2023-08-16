@@ -5,11 +5,12 @@ import Coin from "../../components/Coin";
 import { HomeProps } from "../../models/homeInterface";
 // import { ActivityProps } from "../../models/activityInterface";
 import "./index.css";
+import Activity from "../../components/Activity";
 // import { ActivityProps } from "../../models/activityInterface";
 
 const Home = () => {
   const [cryptos, setCryptos] = useState<HomeProps[] | null>(null);
-  // const [activity, setActivity] = useState<ActivityProps[] | null>(null)
+  const [currentCoin, setCurrentCoin] = useState({});
   //   const [isActive, setIsActive] = useState(0);
   useEffect(() => {
     axios
@@ -22,34 +23,27 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="cardContainer">
+    <div className="home">
       <div className="prices">
-        {cryptos
-          ? cryptos.map((crypto) => {
-              return (
-                <Coin
-                  key={crypto.id}
-                  name={crypto.name}
-                  image={crypto.image}
-                  current_price={crypto.current_price}
-                  id={crypto.id}
-                  onSelectItem={() => console.log(crypto)}
-                />
-              );
-            })
-          : null}
+        {cryptos &&
+          cryptos.map((crypto) => {
+            return (
+              <Coin
+                key={crypto.id}
+                name={crypto.name}
+                image={crypto.image}
+                current_price={crypto.current_price}
+                id={crypto.id}
+                onSelectItem={() => {
+                  setCurrentCoin(crypto);
+                  console.log(crypto);
+                }}
+              />
+            );
+          })}
       </div>
       <div className="activity">
-        {}
-        {/* <Activity  
-        current_price={activity.current_price};
-    high_24h={activity.high_24h} 
-    low_24h={activity.low_24h}
-  id={activity.id}
-  image={activity.image}
-  name={activity.name};
-  price_change_24h={activity.price_change_24h}
-  price_change_percentage_24h={activity.price_change_percentage_24h} /> */}
+        <Activity coin={currentCoin} />
       </div>
     </div>
   );

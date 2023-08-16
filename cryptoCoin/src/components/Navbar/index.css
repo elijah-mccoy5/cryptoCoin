@@ -1,0 +1,12 @@
+.navbar{
+    display: flex;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    background-color: #121720;
+}
+.navbar h1{
+    color: #fac650;
+    font-family: 'Press Start 2P', cursive;
+}

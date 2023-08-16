@@ -1,17 +1,18 @@
-.cardContainer {
+.home {
     display: flex;
     flex-direction: row;
-    min-height: 100vh;
-    border: 2px solid green;
+    height: 92vh;
+    background-color: #212931;
 }
 .prices {
     display:flex;
     flex: 2;
     flex-direction: column;
-    border: 2px solid red;
+    height: 100%;
+    overflow: scroll;
+
 }
 .activity {
     display: flex;
     flex: 6;
-    border: 2px solid red;
 }

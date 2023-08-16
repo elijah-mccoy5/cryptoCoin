@@ -1,10 +1,12 @@
 .coinContainer{
     display: flex;
     flex-direction: row;
-    height: 5vh;
+    min-height: 8vh;
     border: 2px solid black;
     justify-content: space-between;
     align-items: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
 
 
 }
@@ -12,17 +14,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 1vw;
 }
 .coinPrice {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: .5vw;
 }
 .coinBrand img {
     height: 3vh;
 }
 .coinBrand h1 {
     font-size: 2vh;
+    margin-left: .5vw;
 }
 
 .coinPrice p {

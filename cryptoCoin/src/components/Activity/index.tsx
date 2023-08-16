@@ -1,21 +1,23 @@
-import { useEffect } from "react";
-import { ActivityProps } from "../../models/activityInterface";
 import "./index.css";
 
-const Activity = (props: ActivityProps) => {
-  useEffect(() => {
-    console.log(props);
-  }, []);
+const Activity = ({ coin }) => {
+  if (Object.keys(coin).length === 0) {
+    return null;
+  }
   return (
     <div className="activityContainer">
-      {/* <h1>{props.name}</h1>
-      <h1>{props.current_price}</h1>
-      <h1>{props.high_24h}</h1>
-      <h1>{props.id}</h1>
-      <img src={props.image} />
-      <h1>{props.low_24h}</h1>
-      <h1>{props.price_change_24h}</h1>
-      <h1>{props.price_change_percentage_24h}</h1> */}
+      <h1>{coin.name}</h1>
+      <img src={coin.image} style={{ height: "10vh" }} />
+      <h2 className="currPrice">${coin.current_price}</h2>
+      <div className="specs">
+        <p>24 Hour High: ${coin.high_24h}</p>
+        <p>24 Hour Low: ${coin.low_24h}</p>
+        <p>Market Cap: {coin.market_cap}</p>
+        <p>24 Hour Price Change: {coin.price_change_24h}</p>
+        <p>
+          24 Hour Price Change Percentage: {coin.price_change_percentage_24h}
+        </p>
+      </div>
     </div>
   );
 };
